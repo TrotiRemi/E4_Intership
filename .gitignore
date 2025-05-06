@@ -1,0 +1,29 @@
+# ============ Unity ============
+
+# Cache de compilation
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+
+# Fichiers utilisateur
+UserSettings/
+MemoryCaptures/
+.vscode/
+
+# Fichiers Visual Studio/IDE
+*.csproj
+*.unityproj
+*.sln
+*.user
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.tmp
+
+# Autres
+.DS_Store
+Thumbs.db
