@@ -207,7 +207,7 @@ VideoPlayer:
   m_TargetMaterialProperty: <noninit>
   m_RenderMode: 2
   m_AspectRatio: 2
-  m_DataSource: 0
+  m_DataSource: 1
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
@@ -215,7 +215,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: 
+  m_Url: https://dl.dropboxusercontent.com/scl/fi/hvejtlgdy3xk9363i0a9o/CaptainJack.mp4?rlkey=z7p3iv1st9hcddgj827jnozzd&st=n80ipg88
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -523,6 +523,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f741fe80ad9a344c9997d85bc04719e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  videoMaterial: {fileID: 2100000, guid: 618309854c57b3d4097c19e5d2ed8eab, type: 2}
+  targetTexture: {fileID: 8400000, guid: 9d4e906d538086a49ad1c19017087db3, type: 2}
 --- !u!4 &1754815601
 Transform:
   m_ObjectHideFlags: 0
@@ -613,7 +615,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2.0387487e-38, z: 2.066299e-39, w: 9.5933e-39}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 4.9e-44, z: 1.4358e-41, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0

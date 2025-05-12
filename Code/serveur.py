@@ -5,17 +5,17 @@ import os
 from datetime import datetime
 
 PORT = 8888
-DATA_FILE = "data.json"
+DATA_FILE = "received_data.json"
 
 class Handler(http.server.BaseHTTPRequestHandler):
     def do_POST(self):
         content_length = int(self.headers.get('Content-Length', 0))
         post_data = self.rfile.read(content_length).decode('utf-8')
-        print("received :", post_data)
+        print("Reçu :", post_data)
         if "text/csv" in self.headers.get('Content-Type', ''):
             with open("qoe_data_received.csv", "wb") as f:
                 f.write(post_data.encode("utf-8"))
-            print("CSV received and save.")
+            print("CSV reçu et sauvegardé.")
 
         file_path = os.path.join(os.path.dirname(__file__), DATA_FILE)
 
@@ -36,11 +36,11 @@ class Handler(http.server.BaseHTTPRequestHandler):
         self.send_response(200)
         self.end_headers()
 
-print(f"Server HTTP start over http://localhost:{PORT}")
+print(f"Serveur HTTP démarré sur http://localhost:{PORT}")
 with socketserver.TCPServer(("", PORT), Handler) as httpd:
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:
-        print("\nEnd of the server...")
+        print("\nArrêt du serveur...")
     finally:
         httpd.server_close()
